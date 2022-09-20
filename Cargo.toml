@@ -1,0 +1,23 @@
+[package]
+name = "racnal"
+version = "0.0.1"
+license = "MIT"
+edition = "2021"
+authors = ["Vincent Roy <metakernel@outlook.com"]
+repository = "https://github.com/metakernel/racnl"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+racnl_shared = { path = "shared" }
+racnl_linux = { path = "linux" }
+racnl_windows = { path = "windows" }
+racnl_macos = { path = "macos" }
+
+[workspace]
+members = [
+    "shared",
+    "windows",
+    "linux",
+    "macos"
+]
